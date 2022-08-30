@@ -3,7 +3,6 @@ package test
 import (
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/logger"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"github.com/stretchr/testify/assert"
 )
@@ -31,6 +30,4 @@ func TestDatadogUserCreate(t *testing.T) {
 	// Verify we're getting back the outputs we expect
 	assert.Equal(t, expectedDatadogUserName, datadog_user)
 
-	// Console logs
-	logger.Logf(t, "datadogUserName is %s", datadog_user)
 }
