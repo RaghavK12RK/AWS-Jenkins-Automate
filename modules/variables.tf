@@ -1,16 +1,29 @@
-variable "access_key" {
-    default = "AKIAXVCQQMJA2ZXAOGPM"
+# ---------------------------------------------------------------------------------------------------------------------
+# REQUIRED MODULE PARAMETERS
+# These variables must be passed in by the operator.
+# ---------------------------------------------------------------------------------------------------------------------
+
+variable "datadog_api_key" {
+    description = "the api key is unique for our organisation"
 }
 
-variable "secret_key" {
-    default = "5b9XJav6MohYq0lmy5B/HEaYjkeHZ704UWw+dybz"
+variable "datadog_app_key" {
+    description = "the application key is unique for our organisation"
 }
 
-variable "region" {
-    default = "us-east-1"
+variable "tmna_email_id" {
+    description = "user email id for invite"
 }
 
-variable "vpc_name" {
-  description = "test vpc name "
-  default     = "test-vpc"
+variable "BU-L2_shortname" {
+    description = "Name of the L2 suborganization"
+}
+
+variable "BU-L3_shortname" {
+    description = "Name of the L3 suborganization"
+}
+
+variable "dd_role" {
+    description = "Filter to determine Admin access"
+    type        = string
 }
