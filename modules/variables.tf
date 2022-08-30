@@ -11,7 +11,7 @@ variable "datadog_app_key" {
     description = "the application key is unique for our organisation"
 }
 
-variable "tmna_email_id" {
+variable "user_email_id" {
     description = "user email id for invite"
 }
 
