@@ -42,7 +42,7 @@ data "datadog_role" "permission" {
 
 # Create a new Datadog user
 resource "datadog_user" "user_email" {
-  email = var.tmna_email_id
+  email = var.user_email_id
   roles = [data.datadog_role.permission.id]
 }
 
