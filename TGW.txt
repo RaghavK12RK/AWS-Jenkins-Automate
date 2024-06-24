@@ -1,0 +1,5 @@
+how to share files to onprem ----- by TGW we have it in master account and it wll do ram share to every child accounts.
+
+By resource Access manager, to share the transit gateway with other accounts by adding target account.
+
+Login to the target and open Resource Access Manager and accept the shared Transit Gateway resource.
