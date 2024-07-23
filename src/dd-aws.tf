@@ -21,8 +21,8 @@ terraform {
 }
 
 provider "datadog" {
-  api_key = "f77e37b64ef28488d4d0ed25ec1da758"
-  app_key = "10274945fd82c4f90bfb43e6916850c627e7600a"
+  api_key = ""
+  app_key = ""
 }
 
 data "aws_iam_policy_document" "datadog_aws_integration_assume_role" {
