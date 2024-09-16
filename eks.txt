@@ -8,4 +8,6 @@ aws eks update-kubeconfig --region ap-south-1 --name test-eks
 
 then you can execute from local
 
-* eksctl get svc
+* kubectl get svc
+* kubectl get nodes
+* kubectl describe node <node-name>
