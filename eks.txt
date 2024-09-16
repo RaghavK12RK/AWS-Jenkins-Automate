@@ -11,3 +11,5 @@ then you can execute from local
 * kubectl get svc
 * kubectl get nodes
 * kubectl describe node <node-name>
+
+NOTE In AWS configure for JSON you shld always type lowercase to "json".
