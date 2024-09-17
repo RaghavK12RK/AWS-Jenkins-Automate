@@ -1,0 +1,51 @@
+The pillars of the framework: (AWS Well-Architected Framework)
+
+Production Readiness Questions
+
+# Operational excellence
+
+Is all configuration written as code and managed through pipelines?
+
+Source controlled server configuration?
+
+DR plan defined and documented? Automated? Tested?
+
+What is the operating model? Traditional ops, DevOps, SRE?
+
+Testing - automatic unit tests? What level of testing?
+
+# Security
+
+Encryption at rest & in transit?
+
+Least privileged policies defined?
+
+# Reliability
+
+CUJs defined and documented?
+
+SLOs and SLIs defined and documented? Alerts?
+
+Storage backup & restore process defined & documented? Automated?
+
+# Performance efficiency
+
+Optimized for multi-region / global access?
+
+Scaling configured and optimized?
+
+Optimized native cloud services?
+
+Networking - minimal Spoke VPC CIDR (if required)
+
+# Cost optimization
+
+Spot instances?
+
+Lifecycle policies defined? Intelligent tiering?
+
+Sustainability
+
+Workloads right-sized?
+
+ARM supported, using Graviton?
