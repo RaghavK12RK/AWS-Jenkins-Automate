@@ -1,0 +1,46 @@
+AWS Database TYPE monitoring By Datadog Tool
+
+Currently, Datadog supports only MySql, PostgreSQL, & SqlServer
+
+### Today we learn of AWS Postgres SQL in Datadog monitoring 
+
+First we need to setup the APM monitoring in Datadog
+
+1.Create a postgres instance DB in AWS and kept ready.
+2.Go to datadog console, select integrations, AWS integrations by IAM role with account(doc for ref)
+3.create IAM role with std given datadog policy.
+4.For creating role, select IAM, roles and select AWS Account , another aws account (given dd aws account in doc) and external ID same ref in doc.
+5.Attach that created policy to role.
+6.Give AWS acc id and acc role in Datadog AWS integration console side to finish integration.
+7.In AWS integration after integrated, select resource collection (std collection).
+
+
+Database integration steps in Datadog.
+
+1.Select monitoring, db monitoring, select postgres + AWS RDS.2. 
+2.IN database AWS select parameter group and set parameter groups to given value in doc.
+3. In you chnage the parameter values, be sure to restart the DB.
+4. Next we are launching this RDS in EC2 instance for install DD agent so.
+5. launch Amazon linux2 instance, launch it by using puttygen.
+6. Launch agent in going to datadog select agents, select amazon linux 2 and run the command in ec2.
+7. run the command "sudo systemctl start datadog agent".
+8. for checking status "sudo systemctl status datadog agent", shld see dd agent running.
+9. install postgres in linux ec2, run sudo apt-get install postgressql15.
+10. check the ec2 security group, outbound shld have postgres port open.
+11. Run command for connecting your postgres in ec2 "psql -h <DB endpoint pasterhere> --port 5432 -U postgres (run this in ec2).
+12. Run commands which has in postgres datadog commands >- 10.0 version of Db
+13. for next after 2 commands psql -h one add endpoint of DB modify in command and execute.
+14. it wll ask datadog password which we given in first command in creating user.
+15. next configuring agent run cd/etc/datadog-agent/ (you wll see postgres.d) when after execution this.
+16. next run cd postgres.d/, after run ls, you see conf.yaml.example
+17. open that file by running "sudo vim conf.yaml", add the host command in dd doc and paste here.
+18. download ssh pem file direct from net search it wll show aws side which region of ec2 that reg to download .pem
+19. To run that sudo apt-get <awspemlink> enter, then do ls it wll show pem file
+20. again open file "sudo vim conf.yaml", run last command init_config that dd file show.DB indentifier as our DB AWS name, host DB endpoint.
+21. sudo systemctl restart datadog-agent.
+check in datadog console, APM >> Database monitoring
+
+
+
+
+
