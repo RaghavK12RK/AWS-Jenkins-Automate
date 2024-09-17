@@ -1,0 +1,36 @@
+** Terragrunt import commands:-- (GCP)
+
+* terragrunt state list
+
+* terragrunt import module.britive-gcp-project-groups.module.gcp-app-readonly-group.module.britive-profile\[0\].britive_profile_policy.policy\[0\] q4fm3e6f48nw3ap409vg/gcp-mktg-ing-readonly-nonprod_1457
+
+* terragrunt import module.britive-gcp-project-groups.module.gcp-app-readonly-group.module.britive-profile\[0\].britive_profile_policy.policy\[0\] q4fm3e6f48nw3ap409vg/gcp-mktg-ing-readonly-nonprod_1457
+
+* terragrunt import module.dome9account.dome9_cloudaccount_gcp.gcp_cloudaccount ea092770-54c5-448c-b7e5-f4321c73456d (dome9 import command) id is http link
+
+** Terragrunt remove commands:--
+
+For remove commands we dont need to give any inputs we need to define upto modules to resource names
+
+* terragrunt state rm module.britive-gcp-project-groups.module.gcp-app-readonly-group.module.britive-profile[0].britive_profile_tag.profile_tag
+
+* terragrunt state rm module.britive-gcp-project-groups.module.gcp-app-readonly-group.module.britive-profile\[0\].britive_profile_permission.permission
+
+** Terragrunt import commands:-- (AWS)
+
+* terragrunt import module.account-baseline-app.module.britive-profiles.module.app-admin-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+* terragrunt import module.account-baseline-app.module.britive-profiles.module.app-readonly-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+* terragrunt import module.account-baseline-app.module.britive-profiles.module.app-dev-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+** Terragrunt import commands:-- (GCP)
+
+* terragrunt import module.britive-gcp-project-groups.module.gcp-app-admin-group.module.britive-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+* terragrunt import module.britive-gcp-project-groups.module.gcp-app-readonly-group.module.britive-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+* terragrunt import module.britive-gcp-project-groups.module.gcp-app-dev-group.module.britive-profile\[0\].britive_profile.profile\[0\] <app_name>/<profile_name>
+
+
+ 
