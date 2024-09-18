@@ -1,0 +1,302 @@
+aws lambda invoke --function-name csy-update-d9-aaia-generic-list-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"approved_iam_user":"dna_tbdp-smtp_nonprod_svc","approved_user_arn":"arn:aws:iam::156787888485:user/dna_tbdp-smtp_nonprod_svc","approval_details":"RITM2064763 1ts ticket","submitted_by":"raghavendra.rao@toyota.com"}' response.json  
+
+aws lambda invoke --function-name csy-update-d9-aaia-generic-list-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"approved_iam_user":"builders_tdmp-jenkins_ci_nonprod_svc","approved_user_arn":"arn:aws:iam::249971766579:user/builders_tdmp-jenkins_ci_nonprod_svc","approval_details":"RITM1884523 1ts ticket","submitted_by":"raghavendra.rao@toyota.com"}' response.json 
+
+aws lambda invoke --function-name csy-update-d9-aaia-generic-list-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"approved_iam_user":"builders_skpi-jenkins_prod_svc","approved_user_arn":"arn:aws:iam::900290982748:user/builders_skpi-jenkins_prod_svc","approval_details":"RITM1854942 1ts ticket","submitted_by":"raghavendra.rao@toyota.com"}' response.json
+
+export aws_region="us-east-1"
+
+how to exclude lock state commands
+
+terragrunt plan -lock=false
+
+aws lambda invoke --function-name csy-add-d9-atuotra-exclusion-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"account_id":"978611800276","exclusion_reason":"root login for aws config enablew osaka region TASK21638598","submitted_by":"raghavendra.rao@toyota.com" }' response.json
+-----------------------------------------------------------------
+ sub_org_name  = "dpe-cd" # sub-org name in which you need to create service account
+ user_name     = "test" # service name ex: integration-keys
+ region_name   = "us-west-2" # region name where the app keys to be stored in AWS account
+ members       = ["raghavendra.rao@toyota.com","ashok.gattineni@toyota.com"] # member names to be added for Azure AD service account
+ owners        = "mitchell.jenkins@toyota.com"  # owner names to be added for Azure AD service account
+ account_id    = "715662994982" # Account id for application key to be stored in ssm parameter store in the given AWS account
+
+
+Dpe-cd dataodg keys
+
+export API_KEY=/datadog/dpe-cd/api_key f77e37b64ef28488d4d0ed25ec1da758
+export APP_KEY=/datadog/dpe-cd/app_key 69afc96f086143b81151e5ed3469103fb7031317
+environ ROLE_DATA_ID=5b8a0464-18b6-11ed-b081-da7ad0900002
+dd-service account id = f4593e61-10f8-11ee-9572-564d0653d346, 6cd0f428-14e1-11ee-9d87-5a604ba97209
+
+
+/datadog/dcorpx-naq/api-key
+/datadog/dcorpx-naq/app-key
+
+
+["87b00304-dd12-11e8-9e59-cbeb5f71f72f","6c87d3da-e5c5-11ec-b1d6-da7ad0900002","46a301dc-ec5c-11ea-aa9f-13b33f8f46ea","1afff448-d5e9-11ec-ae37-da7ad0900002"]
+
+permission1 = response['data'][94]['id'] # Dashboards Report Write   6c87d3da-e5c5-11ec-b1d6-da7ad0900002
+ 
+permissions2 = response['data'][26]['id'] # Org App Keys Write  46a301dc-ec5c-11ea-aa9f-13b33f8f46ea
+
+permissions3 = response['data'][22]['id'] # User Access Invite
+
+permissions4 = response['data'][8]['id'] # Logs Write Archives  
+
+permissions5 = response['data'][92]['id'] # Usage Notifications Read
+
+https://github.com/Toyota-Motor-North-America/ace-datadog-admin
+
+tmna-root
+api_key = ""
+app_key = ""
+
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+
+AWS master cred
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_SESSION_TOKEN=""
+------------------------------------------------------------------
+For prod env
+
+export API_TOKEN=3I295JYmZ/dHIJJ26y7aTqRQIuAXmp1eaf5nTV8/Ibk=
+export APP_ID=38l7py6ThmeOc21vZM9H
+export BRITIVE_TENANT=https://tmna.britive-app.com
+export BRITIVE_TOKEN=3I295JYmZ/dHIJJ26y7aTqRQIuAXmp1eaf5nTV8/Ibk=
+
+# api_url = f'https://tmna.britive-app.com/api/apps/{app_id}/paps/{profile_id}'
+# api_url = f'https://tmna.britive-app.com/api/apps/{app_id}/paps?view=summary&page=0&size=100&filter=name co "tdsp"'
+--------------------------------------------------------------------
+For DEV environment
+
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/ec2-user/.bashrc
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export BRITIVE_TENANT=https://tmna-poc.britive-app.com
+export BRITIVE_TOKEN=9xocSYs3NCVtcDm5wJReRx7huKkbTFN0K2kNnqp/Qfw=
+
+612019_NCR00005_CT-Registration-Prod@toyota.com - 195907567422
+612019_NCR00005_CT-Registration-NonProd@toyota.com - 837432931185
+
+
+--------------------------------------------------------------------
+
+export GOOGLE_APPLICATION_CREDENTIALS=C:/Users/raghavendra.k17/tmna-ace-automation-prod.json
+
+export TERRAGRUNT_DOWNLOAD=C://.terragrunt-cache 
+
+--------------------------------------------------------------------------
+
+aws organizations close-account --account-id 332243520495
+
+aws organizations describe-account --account-id 332243520495
+
+
+gcp-apimgmt_hybrid-admin-prod
+gcp-apimgmt_hybrid-dev-prod
+gcp-apimgmt_hybrid-readonly-prod
+------------------------------------------------------------------------
+GCP service account cmd
+
+gcloud iam service-accounts keys create apigee-cassandra --iam-account=apigee-cassandra@tmna-apimgmt-hybrid-prod.iam.gserviceaccount.com
+
+gcloud iam service-accounts keys create apigee-logger --iam-account=apigee-logger@tmna-apimgmt-hybrid-prod.iam.gserviceaccount.com
+
+--------------------------------------------------------------------------
+Repo naming standard
+
+<team>-<app>-aws-infra-live
+---------------------------------------------------------------------------
+terragrunt cache file export command
+
+I have attached the snippet where we need to change the link marked as yellow in the snippet to this new link shared below
+ https://chofer.cloud.toyota.com/docs/default/Component/ACE-TECH-DOCS/cloud-platform/aws/standards/service-account-naming-standard/, Please help in changing the link also.
+
+export TERRAGRUNT_DOWNLOAD=C://.terragrunt-cache 
+export TERRAGRUNT_DOWNLOAD=C://repos/.terragrunt-cache 
+-----------------------------------------------------------------
+git config --system core.longpaths true
+
+export TERRAGRUNT_DOWNLOAD=C://Users/.terragrunt-cache 
+-----------------------------------------------------------------
+aws ec2 allocate-address --domain vpc --address 54.144.247.125
+
+AWS IAM commands:-----
+
+aws iam update-group --group-name jenkins_svc_grp --new-group-name builders_spadams-jenkins_prod_svc_grp
+aws iam update-group --group-name builders_tdb-terraform-nonprod_grp --new-group-name dmsc_tdb-terraform_nonprod_svc_grp
+
+areteminds
+
+aws iam update-user --user-name dcx_msrs_prod_svc --new-user-name dcx_msrs-jenkins_prod_svc
+
+aws iam update-user --user-name dna_tdsp-dsmds-vmx-cicd_dev_nonprod_svc --new-user-name dna_tdsp-dsmds_vmx_sa-cicd_dev_nonprod_svc
+---------------------------------------------------------------------------------------------------------------------------------
+aws iam delete-user --user-name dna_tdsp-pafeds-jenkins_qa_nonprod_svc
+
+aws iam remove-user-from-group --user-name dna_tdsp-pafeds-jenkins_qa_nonprod_svc --group-name dna_tdsp-pafeds-jenkins_qa_nonprod_svc_grp
+
+
+aws lambda delete-function \
+    --function-name Update_Account_Tags
+
+deleted IAM role, lambda func, amazon eventbridge
+
+how to make it orchestrated for accept assume role and no assume role both.
+
+
+
+------------------------------------------------------------------------------------------------------------------
+challenges: -------
+
+1. service acc not using are requested to modify, Mail thread sent and no reply from users
+
+
+https://github.com/cloudposse/terraform-datadog-platform/blob/master/examples/organization_settings/main.tf (IMP resource)
+
+dome9 account added
+
+(For root account access)
+
+aws lambda invoke --function-name csy-add-d9-atuotra-exclusion-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"account_id":"676314815322","exclusion_reason":"TASK20316216 Creating an exclusion for root mfa enablement","submitted_by":"raghavendra.rao@toyota.com"}' response.json
+
+aws lambda invoke --function-name csy-add-d9-atuotra-exclusion-lambda-jenkins-deploy --invocation-type Event --cli-binary-format raw-in-base64-out --payload '{"account_id":"044991129072","exclusion_reason":"TASK20352064 Creating an exclusion for root mfa enablement","submitted_by":"raghavendra.rao@toyota.com"}' response.json
+
+PASSWORDS
+
+For CDX-526 As per the story fulfillment crafted an epic of "CDX-599".
+
+And CDX-567 also i could see in the review section, It was did and completed fenil.
+
+
+
+node js , DB aws rds postgres github--doc (backstage plugins(piece of codeimport libraries) endpoints
+
+evert tabs plugins is maintained
+
+prod- docker
+
+CSS is the casecading style for how to look the website (user interface)
+HTML coding is just the strcuture of the website(.html for structure of the site)
+Applying CSS on HTML code-
+Navigation bars (nodeJS code)
+user profile view (HTML or CSS)
+
+TASK16277490- AWS accounts transfer from TMNA master to CX master
+
+TASK16277490- Daily budget alert, Currently i have sent an email to suren for the proceeding the ticket.
+
+
+vpc- 10.58.148.0/23
+
+subnets are multi AZ
+          
+            ( 10.58.148.0/23, 2 i.e, 10.58.148.0/25,  2+2 )
+cidrsubnet=(var.cidr_block, var.private_subnet_bits, count.index +local.private_spacing)
+            prefix, newbits , netnum
+
+prod, rnd, qa
+
+mom_tbmnc_prod - account is created
+Account Name: tmna_mom_tbmnc_prod
+Account Id: 862077432441 Azure Ad security groups to get access to AWS account
+* mom_tbmnc-dev-prod 
+* mom_tbmnc-readonly-prod 
+* mom_tbmnc-admin-prod
+
+Nonprod - 96Bjx#Qey^Fgc0TjI1yW9  
+prod - 7@9n5lKvV5ZQIpQe$3%Xv  
+sandbox - F3!d1vg4ACJZgNaWW4#OT 
+
+python mfa_standalone.py
+
+Standard root account passwords
+
+96Bjx#Qey^Fgc0TjI1yW9- nonprod
+7@9n5lKvV5ZQIpQe$3%Xv- prod
+F3!d1vg4ACJZgNaWW4#OT- sandbox
+
+Digital Corporate Experiences- l2
+NA Quality- l3
+
+Specific bucket policy permission
+
+{
+    "Version": "2012-10-17",
+    "Id": "Access-to-bucket-using-specific-endpoint",
+    "Statement": [
+        {
+            "Sid": "Access-to-specific-VPCE-only",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::spad-ams-non-prod-s3-vpc-only-access",
+                "arn:aws:s3:::spad-ams-non-prod-s3-vpc-only-access/*"
+            ],
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:sourceVpce": "vpce-097914c0585b21ac1"
+                }
+            }
+        }
+    ]
+
+2WZNC2CMWAR7ZVVRAQHNLXGYVB2SJE2HKMDWWJ6PBTMJOHFUQGMHFIERV2SXDIPO- 32key for otp
+
+
+vars.tf
+
+
+variable "BU-L2_shortname" {
+    description = "Name of the L2 suborganization"
+}
+
+variable "BU-L3_shortname" {
+    description = "Name of the L3 suborganization"
+}
+
+
+Template.tf
+
+# ---------------------------------------------------------------------------------------------------------------------
+# MODULE VARIABLES
+# Define these paramater values as inputs.
+# ---------------------------------------------------------------------------------------------------------------------
+
+terraform {
+  source = "git::git@github.com:Toyota-Motor-North-America/ace-aws-infra-modules-platform.git//security/access/iam-service-account?ref=master"
+}
+
+locals {
+  global_vars   = read_terragrunt_config(find_in_parent_folders("global.hcl"))
+  account_vars  = read_terragrunt_config(find_in_parent_folders("account.hcl"))
+  region_vars   = read_terragrunt_config(find_in_parent_folders("region.hcl"))
+
+  datadog_api_key = "" #Enter the api_key 
+  datadog_app_key = "" #Enter the app_key
+  tmna_email_id   = "" #Enter the tmna_email-id of the user
+  BU-L2_shortname = "" # Enter L2 BU shortname
+  BU-L3_shortname = "" # Enter L3 BU shortname
+
+}
+
+include {
+  path = find_in_parent_folders()
+}
+
+inputs = {
+  aws_account_id           = local.aws_account_id
+  aws_region               = local.aws_region
+  bu_shortname             = local.bu_shortname
+  name_prefix              = local.name_prefix
+  environment              = local.environment
+  service_account_type     = local.service_account_type
+  policy                  = jsonencode() ## Paste policy with in '()'
+}
+
+####
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_SESSION_TOKEN=""
