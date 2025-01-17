@@ -5,4 +5,4 @@ set -e
 docker pull raghavendrark14/simple-python-flask-app
 
 # Run the Docker image as a container
-docker run -d -p 5000:5000 raghavendrark14/simple-python-flask-app
+docker run -d -p 5040:5040 raghavendrark14/simple-python-flask-app
